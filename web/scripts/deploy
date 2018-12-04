@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ssh developer@dev.aztec.io <<EOF
+  cd ~/Aztec-web/web
+  git pull origin dev
+  npm install
+  cd scripts
+  /bin/bash ./restart.sh
+  exit
+EOF
